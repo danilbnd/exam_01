@@ -1,0 +1,93 @@
+.ba-header {
+  background: url(../img/header_bg.jpg) 50% no-repeat;
+  background-size: cover;
+  padding: 265px 0 135px;
+  &__inner {
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__body {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 6.82px;
+    margin-bottom: 50px;
+  }
+  &__search {
+	margin: 0 auto;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+	 margin-bottom: 120px;
+	 width: 60%;
+    p {
+		 text-align: center;
+      color: #999999;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 2.8px;
+      padding: 13px;
+    }
+    button {
+      display: flex;
+		justify-content: center;
+		padding:15px 15px 15px 36px;
+		svg{
+			margin-left: 15px;
+		}
+    }
+  }
+  &__scroll {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 2.8px;
+  }
+}
+
+.ba-section-header-bar {
+  background: $primary-color;
+}
+.ba-logo {
+  display: flex;
+  align-items: center;
+}
+.ba-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 28px 0 32px;
+
+
+  &__main-nav {
+    display: flex;
+	 align-items: center;
+	 &:first-child{
+	
+	 }
+  }
+  &__menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+	 text-transform: uppercase;
+	 
+	 a:hover{
+
+		color: darken($primary-color, 25%);
+	
+	 }
+
+    li + li {
+      margin-left: 42px;
+    }
+  }
+}

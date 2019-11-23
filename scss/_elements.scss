@@ -1,33 +1,69 @@
-
 /* Typography */
 a,
 input[type="submit"],
 input[type="button"],
-button{
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+button {
+  transition: color 0.3s ease-in, border-color 0.3s ease-in,
+    background-color 0.3s ease-in, opacity 0.3s ease-in;
 }
 input[type="submit"],
 input[type="button"],
 button,
-.ba-button{
-	display: inline-block;
-	&:hover{
+.ba-button {
+  min-height: 60px;
+  padding: 0 38px;
+  background: $primary-color;
+  font-family: $secondary-font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  border: none;
+  display: inline-block;
+	outline: none;
+  &--search {
+    border: 3px solid #fff;
+  }
+  &--travel {
+    letter-spacing: 1.2px;
+    padding: 0 64px;
+  }
 
-	}
+  &:hover {
+    background-color: darken($primary-color, 15%);
+  }
 }
+.ba-button--travel{
+	padding: 0 60px;
+}
+.ba-button--search {
+	border: 3px solid #fff;
+ }
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
 input[type="tel"],
+input[type="search"],
 textarea,
 select {
-	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-	&:focus{
-		
-	}
+  transition: color 0.3s ease-in, border-color 0.3s ease-in,
+    background-color 0.3s ease-in, opacity 0.3s ease-in;
+  &:focus {
+  }
 }
 
 textarea {
-
 }
+
+input[type="search"] {
+  width: 100%;
+  text-align: center;
+  border: none;
+  color: #757575;
+  outline: none;
+ }
+ 
+  
+

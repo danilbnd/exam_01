@@ -1,13 +1,13 @@
 $medium: 640px;
 $large: 1024px;
-$primary-color: ;
-$text-color: ;
-$secondary-color: ;
+$primary-color: #5474fd;
+$secondary-color: #333333;
+$text-color: #e8e8e8;
 
-$body-font-family: ;
-$text-font-family: ;
+$body-font-family: "Josefin Sans", sans-serif;
+$secondary-font-family: "Aleo", serif;
 
-
+@import url("https://fonts.googleapis.com/css?family=Aleo|Josefin+Sans:400,700&display=swap");
 @import "normalize";
 @import "layout";
 @import "elements";
@@ -16,12 +16,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font: 400 14px/1.5 $body-font-family;
-  color: $text-color;
+  font: 400 16px/1.5 $body-font-family;
+  color: #fff;
+  border: 15 solid #fff;
 }
 
 p {
   margin: 0;
+  color: $text-color;
 }
 
 h1,
@@ -34,7 +36,7 @@ h6 {
 }
 
 a {
-  color: $primary-color;
+  color: #fff;
   text-decoration: none;
 
   &hover {
@@ -42,84 +44,103 @@ a {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
 h1 {
-
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 4.8px;
 
   @media screen and (min-width: $medium) {
-    font-size: 30px;
+    font-size: 48px;
   }
 }
 h2 {
- 
+	font-size: 24px;
+	font-weight: 400;
+
   @media screen and (min-width: $medium) {
-    font-size: 24px;
+	font-size: 36px;
   }
 }
 h3 {
-  
+	color: #fefefe;
+	font-size: 20px;
+font-weight: 400;
+line-height: 26px;
+text-transform: uppercase;
 	
-  @media screen and (min-width: $medium) {
-    font-size: 18px;
-  }
 }
 h4 {
-  
 }
 
 /* Layout */
 .ba-container {
   padding-left: 15px;
   padding-right: 15px;
-  max-width: 1200px;
+  max-width: 1110px;
   width: 100%;
 }
-@import "header";
-@import "section-intro";
-@import "section-fitness";
-@import "section-trainers";
-@import "section-gallery";
-@import "section-price";
+
+@import 'header';
 
 .ba-section {
-  padding: 60px 0;
+  padding-top: 120px;
 
-  &--intro {
-    background: #333 url(../img/bg-intro.jpg) no-repeat 50%;
-    background-size: cover;
-    @media screen and (min-width:$medium){
-		 
-	 }
-    }
-  }
-  &--trainers {
-    
+  &--choose{
+	  background:url(../img/bg-choose.jpg)50% no-repeat;
+	  background-size: cover;
+	  padding-bottom: 132px;
   }
 
-  &--price {
-    
-  }
-  &--partners {
+  &--icon{
+	  padding: 82px 0 119px;
+	  background: $secondary-color;
 
-    @media screen and (min-width: $large) {
-     
-    }
   }
-
-  &--contacts {
-   
-  }
-  &--footer {
+  &--tourist{
+	  background: url(../img/tourist-bg.jpg) 50% no-repeat;
+	  background-size: cover;
+	  padding-bottom: 200px;
   }
 }
+.ba-section-travel{
+	padding: 229px 0 100px;
+	&--one{
+		background: url(../img/travel-one-bg.jpg) 50% no-repeat;
+		background-size: cover;
+	}
+	&--two{
+		background: url(../img/travel-two-bg.jpg) 50% no-repeat;
+		background-size: cover;
+	}
+}
+@import 'section-choose';
+@import 'section-icon';
+@import 'section-travel';
+@import 'section-tourist';
+
+.ba-footer{
+	padding: 120px 0 54px;
+	background: #232323;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
 
+	img{
+		margin-bottom: 15px;
+	}
+	p{
+		margin-bottom: 30px;
+	}
+	
+}
+svg{
+	fill: #fff;
+	&:hover{
+		fill:$primary-color;
+	}
 
-@import "contacts";
+}

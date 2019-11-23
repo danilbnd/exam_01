@@ -1,0 +1,26 @@
+.ba-icon-menu {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+	 list-style: none;
+	 padding-right: 64px;
+  }
+  &__link {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    display: block;
+    margin-top: 34px;
+    color: $text-color;
+    font-family: $secondary-font-family;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+
+
